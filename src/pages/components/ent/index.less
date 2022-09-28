@@ -1,0 +1,57 @@
+.ent {
+  border: 1px solid #02f1fa;
+  border-radius: 16px;
+  padding:.26rem;
+  height:2.18rem;
+  &_box {
+    dl {
+      margin-top: .18rem;
+      display: flex;
+      margin-bottom: 0;
+      dt {
+        width: 2rem;
+        color: #02f1fa;
+        font-size: 0.18rem;
+      }
+      dd {
+        flex: 1;
+        margin-bottom: 0;
+        ul {
+          margin:0;
+          li {
+            display: inline-block;
+            height: 10px;
+            transition: height 0.1s ease 0.1s;
+            :global {
+              .ant-statistic-content-value-int,
+              .ant-statistic-content {
+                font-size: 0.12rem;
+                color: #02f1fa;
+              }
+            }
+            &:hover {
+              cursor: pointer;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.popover {
+  font-size: 0.12rem;
+  :global {
+    .ant-popover-inner-content {
+      // background-color: #02f1fa;
+      padding: 0.05rem 0.08rem;
+      font-size: 0.12rem;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .ant-statistic-content-value {
+      font-size: 0.12rem;
+    }
+  }
+}

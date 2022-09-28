@@ -1,0 +1,78 @@
+.app {
+  &_main {
+    margin: 0px 0.36rem;
+  }
+}
+
+.app_box {
+  display: flex;
+  .app_left {
+    flex: 1;
+    margin-right: 0.36rem;
+    &_box {
+      display: flex;
+
+      .left_box {
+        width: 4.2rem;
+        margin-right: 0.35rem;
+        :global {
+          .pm {
+            height: 0.12rem;
+            min-width: 0.12rem;
+            display: inline-block;
+            color: #02f1fa;
+            text-align: center;
+            margin-right: 0.05rem;
+            font-size: 0.12rem;
+            line-height: 0.12rem;
+            &_0,
+            &_2,
+            &_1 {
+              background-color: #edaf5d;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .right_box {
+        flex: 1;
+        &_botton {
+        }
+      }
+    }
+  }
+  .app_right {
+    width: 4.2rem;
+    :global {
+      .pm {
+        height: 0.12rem;
+        min-width: 0.12rem;
+        display: inline-block;
+        color: #02f1fa;
+        text-align: center;
+        margin-right: 0.05rem;
+        font-size: 0.12rem;
+        line-height: 0.12rem;
+        &_0,
+        &_2,
+        &_1 {
+          background-color: #9931fe;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.ent_list {
+  color: #44f0e9;
+  font-size: 0.18rem;
+  margin-bottom: 0.1rem;
+  padding-left: 0.4rem;
+  list-style-type: georgian;
+  background: url('../assets/images/dian.svg') no-repeat 0.1rem center;
+  p {
+    font-size: 0.14rem;
+    margin-bottom: 0;
+  }
+}

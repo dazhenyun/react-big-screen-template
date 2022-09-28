@@ -1,0 +1,37 @@
+.capsuleChart {
+  ul {
+    li {
+      display: flex;
+      font-size: 0.12rem;
+      color: #02f1fa;
+      margin-bottom: 10px;
+      .item {
+        flex: 1;
+        height: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        margin-top: 8px;
+        & > div {
+          width: 200px;
+          height: 10px;
+          background: linear-gradient(-90deg, #01a2f8, #00ecd6);
+          border-radius: 5px;
+
+          transition: width 0.5s ease-out;
+          -webkit-transition: width 0.5s ease-out;
+        }
+      }
+    }
+  }
+}
+
+.val {
+  padding-left: 10px;
+  :global {
+    .ant-statistic-content-value-int,
+    .ant-statistic-content {
+      font-size: 0.12rem;
+      color: #02f1fa;
+    }
+  }
+}

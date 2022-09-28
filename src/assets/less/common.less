@@ -1,0 +1,216 @@
+@import './reset.less';
+@import './basic.less';
+@import './iconfont/iconfont.less';
+@import '~antd/lib/style/themes/default.less';
+@import 'color.less'; // 用于覆盖上面定义的变量
+@import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+html {
+  font-size: calc(100vw / 19.2);
+  font-size: -webkit-calc(100vw/19.2);
+  font-size: -moz-calc(100vw/19.2);
+  height: 100vh;
+}
+body {
+  color: @text-color;
+  background: url('../images/bj.jpg') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+// 菜单的边框阴影
+.ant-menu-root.ant-menu-vertical,
+.ant-menu-root.ant-menu-vertical-left,
+.ant-menu-root.ant-menu-vertical-right,
+.ant-menu-root.ant-menu-inline {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+// 弹窗头部
+.ant-modal {
+  .ant-modal-title {
+    color: #000;
+  }
+
+  .ant-modal-content {
+    .gTableBox {
+      padding: 0; // 弹窗的table
+    }
+  }
+
+  .ant-modal-close :hover {
+    color: #000;
+  }
+}
+
+// 整体布局
+.ant-layout {
+  height: 100vh;
+  overflow: auto;
+  min-width: 1000px;
+
+  .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+    background-color: @menu-inline-submenu-bg;
+    box-shadow: none;
+  }
+
+  .ant-layout-content {
+    margin: 0;
+    height: 100%;
+    background: #f1f4f6;
+    padding: 20px;
+
+    &.fullScreen {
+      padding: 0;
+    }
+
+    .componentBox {
+      height: calc(100% - 80px);
+      overflow: auto;
+
+      &.fullH {
+        height: 100%;
+      }
+    }
+  }
+}
+
+// 折叠按钮
+
+@iconH: 70px;
+
+.collapseIcon {
+  margin-top: -@iconH / 2;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  width: 25px;
+  height: @iconH;
+  border-radius: 10px;
+  background-color: @primary-color;
+  text-align: center;
+  line-height: @iconH;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  i {
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+// 表格
+.ant-table {
+  .ant-table-thead > tr > th,
+  .ant-table-column-title {
+    font-weight: bold;
+  }
+
+  .ant-table-tbody > tr > td {
+    border-color: @border-color-base;
+  }
+  .ant-btn-link {
+    padding: 0 10px 0 0;
+  }
+}
+
+// 分割线
+.ant-divider {
+  background: @border-color-base;
+}
+
+.wrap_page {
+  padding: 20px;
+  margin-top: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  border-radius: 4px;
+}
+
+.warp_page_fooot {
+  background: #ffffff;
+  box-shadow: 0 -4px 6px 0 rgba(0, 0, 0, 0.04);
+  border-radius: 0 0 3px 3px;
+  padding: 20px 50px;
+}
+
+.comment_length {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: @text-color;
+  line-height: 25px;
+}
+
+// 详情中 select readonly，设置disabled，重写样式
+.readonly-item > div {
+  color: rgba(0, 0, 0, 0.65) !important;
+  background: #fff !important;
+  cursor: pointer !important;
+}
+
+.lucency {
+  opacity: 0;
+}
+
+.bor-r {
+  border-radius: 4px;
+}
+
+// 表格行编辑框
+.editableCell {
+  border-radius: 4px;
+  padding: 0 11px;
+  border: 1px solid #fff;
+  height: 100%;
+  min-height: 40px;
+
+  &:hover {
+    border-color: #d9d9d9;
+  }
+}
+
+.whiteWrapper {
+  background: #fff;
+  padding: 20px;
+}
+
+.ant-form-inline .ant-form-item-with-help {
+  margin-bottom: 0 !important;
+}
+
+.ant-form-inline .ant-form-item {
+  margin-bottom: 0 !important;
+}
+
+.no-edit .ant-input[disabled] {
+  color: @text-color;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track-piece {
+  //background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
